@@ -16,7 +16,8 @@ Thumbs.db
 .env.*.local
 
 # Generated site output
-/public/
+/public/*
+!/public/.gitkeep
 
 # Optional: npm package lock backup
 package-lock.json
