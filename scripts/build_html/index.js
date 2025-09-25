@@ -1,46 +1,59 @@
 import fs from "fs";
 import path from "path";
+import buildCreaturePages from "./creatures.js";
 
-export default function buildIndex(creatureMetadata) {
-  const indexHtml = `<!DOCTYPE html>
+export default function buildIndex() {
+  const publicDir = path.resolve(new URL("../../public", import.meta.url).pathname);
+
+  // Get metadata for all current creatures
+  const creatures = buildCreaturePages();
+
+  // Group by type -> then by subdirectory
+  const grouped = {};
+  creatures.forEach(c => {
+    const type = c.type; // monster or npc
+    const parts = c.path.split("/").slice(2); // remove leading /type/
+    const subdir = parts.length > 1 ? parts.slice(0, -1).join("/") : "";
+    grouped[type] ??= {};
+    grouped[type][subdir] ??= [];
+    grouped[type][subdir].push(c);
+  });
+
+  // Generate HTML
+  let html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Dragonbane Bestiary</title>
-  <style>
-    body { font-family: sans-serif; padding: 1rem; max-width: 800px; margin: auto; }
-    h1, h2 { margin-top: 1.5rem; }
-    ul { list-style: disc; margin-left: 2rem; }
-  </style>
 </head>
 <body>
   <h1>Dragonbane Bestiary</h1>
+`;
 
-  <h2>Monsters</h2>
-  <ul>
-    ${creatureMetadata
-      .filter(c => c.type === "monster")
-      .map(c => `<li><a href="${c.path}">${c.name}</a> (Tags: ${c.tags.join(", ") || "None"})</li>`)
-      .join("")}
-  </ul>
+  Object.entries(grouped).forEach(([type, subdirs]) => {
+    html += `<h2>${capitalize(type)}</h2>\n`;
 
-  <h2>NPCs</h2>
-  <ul>
-    ${creatureMetadata
-      .filter(c => c.type === "npc")
-      .map(c => `<li><a href="${c.path}">${c.name}</a> (Tags: ${c.tags.join(", ") || "None"})</li>`)
-      .join("")}
-  </ul>
+    Object.entries(subdirs).forEach(([subdir, items]) => {
+      if (subdir) html += `<h3>${capitalize(subdir)}</h3>\n`;
+      html += "<ul>\n";
+      items.forEach(c => {
+        html += `  <li><a href="${c.path}">${c.name}</a></li>\n`;
+      });
+      html += "</ul>\n";
+    });
+  });
+
+  html += `
 </body>
 </html>`;
 
-  // Correct path resolution for ES modules
-  const outputFile = path.resolve(new URL("../../public/index.html", import.meta.url).pathname);
+  fs.writeFileSync(path.join(publicDir, "index.html"), html);
+  console.log("🎉 Main index.html generated with nested subheadings!");
+}
 
-  // Ensure parent folder exists
-  fs.mkdirSync(path.dirname(outputFile), { recursive: true });
-
-  // Write the index file
-  fs.writeFileSync(outputFile, indexHtml);
-  console.log("🎉 Main index.html generated!");
+function capitalize(str) {
+  return str
+    .split("_")
+    .map(s => s[0].toUpperCase() + s.slice(1))
+    .join(" ");
 }
