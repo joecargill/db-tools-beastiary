@@ -1,0 +1,127 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dragonbane Creature",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": ["MONSTER", "NPC"]
+    },
+    "name": { "type": "string" },
+    "size": { "type": "string", "enum": ["SMALL", "NORMAL", "LARGE", "HUGE", "SWARM"] },
+    "movement": { "type": "integer", "multipleOf": 2 },
+    "hp": { "type": "integer" },
+    "wp": { "type": "integer" },
+    "armor": { "type": "integer" },
+    "armors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "rating": { "type": "integer" }
+        },
+        "required": ["name", "rating"],
+        "additionalProperties": false
+      }
+    },
+    "damage_bonus": { "type": "string" },
+    "resistance": { "type": "string" },
+    "immunity": { "type": "string" },
+    "weakness": { "type": "string" },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "enum": [
+              "BLUFFING",
+              "BUSHCRAFT",
+              "CRAFTING",
+              "EVADE",
+              "HEALING",
+              "HUNTING & FISHING",
+              "LANGUAGES",
+              "MYTHS & LEGENDS",
+              "PERFORMANCE",
+              "PERSUASION",
+              "RIDING",
+              "SEAMANSHIP",
+              "SLEIGHT OF HAND",
+              "SNEAKING",
+              "SPOT HIDDEN",
+              "SWIMMING",
+              "ANIMISM",
+              "MENTALISM",
+              "ELEMENTALISM"
+            ]
+          },
+          "level": { "type": "integer" }
+        },
+        "required": ["name", "level"],
+        "additionalProperties": false
+      }
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" }
+        },
+        "required": ["name", "description"],
+        "additionalProperties": false
+      }
+    },
+    "spells": { "type": "array", "items": { "type": "string" } },
+    "abilities": { "type": "array", "items": { "type": "string" } },
+    "weapons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "level": { "type": "integer" },
+          "damage": { "type": "string" },
+          "durability": { "type": "integer" }
+        },
+        "required": ["name", "level", "damage", "durability"],
+        "additionalProperties": false
+      }
+    },
+    "attacks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" }
+        },
+        "required": ["name", "description"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["type", "name", "size", "movement", "hp"],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": { "properties": { "type": { "const": "MONSTER" } } },
+      "then": {
+        "required": ["attacks"]
+      },
+      "else": {
+        "properties": {
+          "attacks": false
+        }
+      }
+    }
+  ]
+}
