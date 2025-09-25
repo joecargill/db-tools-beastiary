@@ -63,6 +63,11 @@ function renderMonsterHTML(monster) {
 <head>
   <meta charset="UTF-8">
   <title>${monster.name} (Monster)</title>
+  <style>
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #333; padding: 4px 8px; }
+    th { background-color: #eee; }
+  </style>
 </head>
 <body>
   <h1>${monster.name} (Monster)</h1>
@@ -84,6 +89,18 @@ function renderMonsterHTML(monster) {
     ${monster.skills.map(s => `<li>${s.name} ${s.level}</li>`).join("\n")}
   </ul>` : ""}
 
+  ${monster.attacks?.length ? `<h2>Attacks</h2>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Name</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      ${monster.attacks.map((a, i) =>
+        `<tr><td>${i + 1}</td><td>${a.name}</td><td>${a.description}</td></tr>`
+      ).join("\n")}
+    </tbody>
+  </table>` : ""}
+
   ${monster.effects?.length ? `<h2>Effects</h2>
   <ul>
     ${monster.effects.map(e => `<li><strong>${e.name}:</strong> ${e.description}</li>`).join("\n")}
@@ -97,6 +114,7 @@ function renderMonsterHTML(monster) {
 </body>
 </html>`;
 }
+
 
 /** Render NPC HTML */
 function renderNpcHTML(npc) {

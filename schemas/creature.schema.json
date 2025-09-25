@@ -95,8 +95,33 @@
         "required": ["name", "level", "damage", "durability"],
         "additionalProperties": false
       }
+    },
+    "attacks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" }
+        },
+        "required": ["name", "description"],
+        "additionalProperties": false
+      }
     }
   },
   "required": ["type", "name", "size", "movement", "hp"],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": { "properties": { "type": { "const": "MONSTER" } } },
+      "then": {
+        "required": ["attacks"]
+      },
+      "else": {
+        "properties": {
+          "attacks": false
+        }
+      }
+    }
+  ]
 }
