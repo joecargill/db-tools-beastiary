@@ -1,0 +1,27 @@
+{
+  "type": "MONSTER",
+  "name": "Fire Dragon",
+  "size": "HUGE",
+  "movement": 10,
+  "hp": 300,
+  "wp": 50,
+  "armor": 8,
+  "resistance": "Fire",
+  "immunity": "Poison",
+  "weakness": "Ice",
+  "skills": [
+    { "name": "SPOT HIDDEN", "level": 12 },
+    { "name": "EVADE", "level": 8 }
+  ],
+  "effects": [
+    {
+      "name": "Flying",
+      "description": "The dragon can fly, allowing it to bypass ground obstacles."
+    },
+    {
+      "name": "Fire Breath",
+      "description": "Exhales a cone of fire causing 8d6 damage to everything in front."
+    }
+  ],
+  "tags": ["dragon", "fire", "legendary"]
+}

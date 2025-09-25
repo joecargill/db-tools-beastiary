@@ -1,0 +1,27 @@
+name: Validate Creature JSON
+
+on:
+  pull_request:
+    paths:
+      - 'creatures/**'
+      - 'schemas/creature.schema.json'
+      - 'scripts/validate_creatures.js'
+
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install ajv ajv-formats glob
+
+      - name: Validate JSON files
+        run: node scripts/validate_creatures.js

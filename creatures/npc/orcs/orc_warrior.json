@@ -1,0 +1,33 @@
+{
+  "type": "NPC",
+  "name": "Orc Warrior",
+  "size": "NORMAL",
+  "movement": 6,
+  "hp": 45,
+  "wp": 10,
+  "armors": [
+    { "name": "Studded Leather", "rating": 2 },
+    { "name": "Chain Mail", "rating": 4 }
+  ],
+  "damage_bonus": "+2",
+  "resistance": "Physical",
+  "immunity": "",
+  "weakness": "Fire",
+  "skills": [
+    { "name": "EVADE", "level": 6 },
+    { "name": "SPOT HIDDEN", "level": 5 },
+    { "name": "RIDING", "level": 3 }
+  ],
+  "abilities": ["Berserk Charge"],
+  "weapons": [
+    { "name": "Longsword", "level": 12, "damage": "2d8", "durability": 15 },
+    { "name": "Large Shield", "level": 10, "damage": "1d8", "durability": 12 }
+  ],
+  "effects": [
+    {
+      "name": "Nocturnal",
+      "description": "In direct sunlight, orcs get a bane on all rolls and suffer D6 damage per stretch."
+    }
+  ],
+  "tags": ["orc", "warrior"]
+}
