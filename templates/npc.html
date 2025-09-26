@@ -1,0 +1,49 @@
+<h1>{{name}} (NPC)</h1>
+
+<p><strong>Size:</strong> {{size}}</p>
+<p><strong>Move:</strong> {{move}}</p>
+<p><strong>HP:</strong> {{hp}}</p>
+
+{{#skills}}
+<p><strong>Skill:</strong> {{name}} — Level {{level}}</p>
+{{/skills}}
+
+{{#armors}}
+<h2>Armors</h2>
+<ul>
+  {{#armors}}
+  <li><strong>{{name}}:</strong> {{rating}}</li>
+  {{/armors}}
+</ul>
+{{/armors}}
+
+{{#abilities}}
+<h2>Abilities</h2>
+<ul>
+  {{#abilities}}
+  <li>{{.}}</li>
+  {{/abilities}}
+</ul>
+{{/abilities}}
+
+{{#spells}}
+<h2>Spells</h2>
+<ul>
+  {{#spells}}
+  <li>{{.}}</li>
+  {{/spells}}
+</ul>
+{{/spells}}
+
+{{#effects}}
+<h2>Effects</h2>
+<ul>
+  {{#effects}}
+  <li><strong>{{name}}:</strong> {{description}}</li>
+  {{/effects}}
+</ul>
+{{/effects}}
+
+{{#tags}}
+<p><strong>Tags:</strong> {{.}}</p>
+{{/tags}}

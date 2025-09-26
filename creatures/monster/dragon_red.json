@@ -1,11 +1,10 @@
 {
   "type": "MONSTER",
-  "name": "Fire Dragon",
+  "name": "Dragon, Red",
   "size": "HUGE",
   "move": 12,
   "armor": 8,
   "hp": 120,
-  "wp": 50,
   "resistance": "Fire",
   "immunity": "Poison",
   "weakness": "Ice",

@@ -28,12 +28,3 @@ jobs:
 
       - name: Build Creature HTML
         run: npm run build
-
-      # Optional: deploy to Cloudflare Pages
-      # - name: Deploy to Cloudflare Pages
-      #   uses: cloudflare/pages-action@v1
-      #   with:
-      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      #     projectName: your-project-name
-      #     directory: public

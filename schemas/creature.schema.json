@@ -13,18 +13,6 @@
     "hp": { "type": "integer" },
     "wp": { "type": "integer" },
     "armor": { "type": "integer" },
-    "armors": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": { "type": "string" },
-          "rating": { "type": "integer" }
-        },
-        "required": ["name", "rating"],
-        "additionalProperties": false
-      }
-    },
     "damage_bonus": { "type": "string" },
     "resistance": { "type": "string" },
     "immunity": { "type": "string" },
@@ -38,30 +26,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "name": {
-            "type": "string",
-            "enum": [
-              "BLUFFING",
-              "BUSHCRAFT",
-              "CRAFTING",
-              "EVADE",
-              "HEALING",
-              "HUNTING & FISHING",
-              "LANGUAGES",
-              "MYTHS & LEGENDS",
-              "PERFORMANCE",
-              "PERSUASION",
-              "RIDING",
-              "SEAMANSHIP",
-              "SLEIGHT OF HAND",
-              "SNEAKING",
-              "SPOT HIDDEN",
-              "SWIMMING",
-              "ANIMISM",
-              "MENTALISM",
-              "ELEMENTALISM"
-            ]
-          },
+          "name": { "type": "string" },
           "level": { "type": "integer" }
         },
         "required": ["name", "level"],
@@ -80,8 +45,27 @@
         "additionalProperties": false
       }
     },
-    "spells": { "type": "array", "items": { "type": "string" } },
-    "abilities": { "type": "array", "items": { "type": "string" } },
+    "attacks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "result": { "type": "string" }
+        },
+        "required": ["name", "description", "result"],
+        "additionalProperties": false
+      }
+    },
+    "abilities": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "spells": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
     "weapons": {
       "type": "array",
       "items": {
@@ -96,16 +80,15 @@
         "additionalProperties": false
       }
     },
-    "attacks": {
+    "armors": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "result": { "type": "string" },
           "name": { "type": "string" },
-          "description": { "type": "string" }
+          "rating": { "type": "integer" }
         },
-        "required": ["name", "description", "result"],
+        "required": ["name", "rating"],
         "additionalProperties": false
       }
     }
@@ -114,13 +97,29 @@
   "additionalProperties": false,
   "allOf": [
     {
-      "if": { "properties": { "type": { "const": "MONSTER" } } },
+      "if": { "properties": { "type": { "const": "MONSTER" } }, "required": ["type"] },
       "then": {
-        "required": ["attacks"]
-      },
-      "else": {
+        "required": ["attacks"],
         "properties": {
-          "attacks": false
+          "wp": false,
+          "armor": { "type": "integer" },
+          "damage_bonus": { "type": "string" },
+          "resistance": { "type": "string" },
+          "immunity": { "type": "string" },
+          "weakness": { "type": "string" },
+          "abilities": false,
+          "spells": false,
+          "weapons": false,
+          "armors": false
+        }
+      }
+    },
+    {
+      "if": { "properties": { "type": { "const": "NPC" } }, "required": ["type"] },
+      "then": {
+        "properties": {
+          "attacks": false,
+          "armor": false
         }
       }
     }
