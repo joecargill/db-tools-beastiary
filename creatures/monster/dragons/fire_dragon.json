@@ -2,7 +2,7 @@
   "type": "MONSTER",
   "name": "Fire Dragon",
   "size": "HUGE",
-  "movement": 12,
+  "move": 12,
   "armor": 8,
   "hp": 120,
   "wp": 50,
@@ -15,26 +15,32 @@
   ],
   "attacks": [
     {
-      "name": "Dragon Wind!",
+      "result": "1",
+      "name": "Dragon Wind",
       "description": "The dragon flaps its great wings and creates a powerful gale that strikes all adventurers within 10 meters. Any loose objects and creatures of up to human size in the whirlwind are hurled 2D6 meters, take the same amount of bludgeoning damage, and land prone."
     },
     {
+      "result": "2",
       "name": "Fiery Breath",
       "description": "The dragon exhales a cone of fire, dealing 10D6 fire damage to all targets in range."
     },
     {
+      "result": "3",
       "name": "Tail Sweep",
       "description": "The dragon swings its tail in a wide arc, dealing 2D10 bludgeoning damage to anyone behind it."
     },
     {
+      "result": "4",
       "name": "Claw Swipe",
       "description": "A vicious swipe with its claws, dealing 2D8 slashing damage."
     },
     {
+      "result": "5",
       "name": "Bite",
       "description": "A powerful bite that deals 3D8 piercing damage and has a chance to knock the target prone."
     },
     {
+      "result": "6",
       "name": "Roar",
       "description": "The dragon roars, causing all enemies within 20 meters to make a fear check or become frightened for 1 round."
     }

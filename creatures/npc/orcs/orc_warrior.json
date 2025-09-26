@@ -2,7 +2,7 @@
   "type": "NPC",
   "name": "Orc Warrior",
   "size": "NORMAL",
-  "movement": 6,
+  "move": 6,
   "hp": 45,
   "wp": 10,
   "armors": [

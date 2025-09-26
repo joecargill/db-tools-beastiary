@@ -2,7 +2,7 @@
   "type": "NPC",
   "name": "Town Guard",
   "size": "NORMAL",
-  "movement": 6,
+  "move": 6,
   "hp": 30,
   "armors": [
     { "name": "Chain Mail", "rating": 4 }
