@@ -92,11 +92,11 @@ function renderMonsterHTML(monster) {
   ${monster.attacks?.length ? `<h2>Attacks</h2>
   <table>
     <thead>
-      <tr><th>#</th><th>Name</th><th>Description</th></tr>
+      <tr><th>d6</th><th>Attack</th></tr>
     </thead>
     <tbody>
       ${monster.attacks.map((a, i) =>
-        `<tr><td>${i + 1}</td><td>${a.name}</td><td>${a.description}</td></tr>`
+        `<tr><td>${a.result}</td><td><b>${a.name}!</b> ${a.description}</td></tr>`
       ).join("\n")}
     </tbody>
   </table>` : ""}

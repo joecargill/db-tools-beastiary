@@ -16,7 +16,7 @@
   "attacks": [
     {
       "result": "1",
-      "name": "Dragon Wind!",
+      "name": "Dragon Wind",
       "description": "The dragon flaps its great wings and creates a powerful gale that strikes all adventurers within 10 meters. Any loose objects and creatures of up to human size in the whirlwind are hurled 2D6 meters, take the same amount of bludgeoning damage, and land prone."
     },
     {
