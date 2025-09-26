@@ -75,7 +75,7 @@ function renderMonsterHTML(monster) {
   <h2>Stats</h2>
   <ul>
     <li><strong>Size:</strong> ${monster.size}</li>
-    <li><strong>Movement:</strong> ${monster.movement}</li>
+    <li><strong>Movement:</strong> ${monster.move}</li>
     <li><strong>Armor:</strong> ${monster.armor}</li>
     <li><strong>HP:</strong> ${monster.hp}</li>
     ${monster.wp !== undefined ? `<li><strong>WP:</strong> ${monster.wp}</li>` : ""}
@@ -130,7 +130,7 @@ function renderNpcHTML(npc) {
   <h2>Stats</h2>
   <ul>
     <li><strong>Size:</strong> ${npc.size}</li>
-    <li><strong>Movement:</strong> ${npc.movement}</li>
+    <li><strong>Movement:</strong> ${npc.move}</li>
     ${npc.armors?.length ? `<li><strong>Armor Items:</strong>
       <ul>
         ${npc.armors.map(a => `<li>${a.name} (Rating: ${a.rating})</li>`).join("\n")}

@@ -9,7 +9,7 @@
     },
     "name": { "type": "string" },
     "size": { "type": "string", "enum": ["SMALL", "NORMAL", "LARGE", "HUGE", "SWARM"] },
-    "movement": { "type": "integer", "multipleOf": 2 },
+    "move": { "type": "integer", "multipleOf": 2 },
     "hp": { "type": "integer" },
     "wp": { "type": "integer" },
     "armor": { "type": "integer" },
@@ -101,15 +101,16 @@
       "items": {
         "type": "object",
         "properties": {
+          "result": { "type": "string" },
           "name": { "type": "string" },
           "description": { "type": "string" }
         },
-        "required": ["name", "description"],
+        "required": ["name", "description", "result"],
         "additionalProperties": false
       }
     }
   },
-  "required": ["type", "name", "size", "movement", "hp"],
+  "required": ["type", "name", "size", "move", "hp"],
   "additionalProperties": false,
   "allOf": [
     {
