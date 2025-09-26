@@ -1,6 +1,7 @@
 {
   "type": "MONSTER",
   "name": "Dragon, Red",
+  "ferocity": 3,
   "size": "HUGE",
   "move": 12,
   "armor": 8,

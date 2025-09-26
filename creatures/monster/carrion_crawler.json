@@ -1,6 +1,7 @@
 {
   "type": "MONSTER",
   "name": "Carrion Crawler",
+  "ferocity": 2,
   "size": "LARGE",
   "move": 20,
   "hp": 20,

@@ -8,6 +8,7 @@
       "enum": ["MONSTER", "NPC"]
     },
     "name": { "type": "string" },
+    "ferocity": { "type": "integer" },
     "size": { "type": "string", "enum": ["SMALL", "NORMAL", "LARGE", "HUGE", "SWARM"] },
     "move": { "type": "integer", "multipleOf": 2 },
     "hp": { "type": "integer" },
@@ -99,7 +100,7 @@
     {
       "if": { "properties": { "type": { "const": "MONSTER" } }, "required": ["type"] },
       "then": {
-        "required": ["attacks"],
+        "required": ["attacks", "ferocity"],
         "properties": {
           "wp": false,
           "armor": { "type": "integer" },
@@ -119,7 +120,8 @@
       "then": {
         "properties": {
           "attacks": false,
-          "armor": false
+          "armor": false,
+          "ferocity": false
         }
       }
     }
