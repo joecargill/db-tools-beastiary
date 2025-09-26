@@ -1,5 +1,10 @@
 import buildCreaturePages from "./build_html/creatures.js";
-import buildIndex from "./build_html/index.js";
+import buildIndexPage from "./build_html/index.js";
 
-const metadata = buildCreaturePages();
-buildIndex(metadata);
+console.log("🔨 Building creature pages...");
+buildCreaturePages();
+
+console.log("🔨 Building main index page...");
+buildIndexPage();
+
+console.log("🎉 Build complete!");

@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import Ajv from "ajv";
 import addFormats from "ajv-formats";
-import * as glob from "glob";
+import { globSync } from "glob";
 
 // Load schema
 const schemaPath = new URL("../schemas/creature.schema.json", import.meta.url);
@@ -22,7 +22,7 @@ const creatureDirs = ["monster", "npc"];
 let allValid = true;
 
 for (const type of creatureDirs) {
-  const files = glob.sync(`${type}/**/*.json`, { cwd: rootDir });
+  const files = globSync(`${type}/**/*.json`, { cwd: rootDir });
   for (const file of files) {
     const filePath = path.join(rootDir, file);
     const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));

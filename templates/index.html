@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dragonbane Bestiary</title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Dragonbane Bestiary</h1>
+
+    <h2>Monsters</h2>
+    <ul>
+      {{#monsters}}
+        <li><a href="{{path}}">{{name}}</a></li>
+      {{/monsters}}
+    </ul>
+
+    <h2>NPCs</h2>
+    <ul>
+      {{#npcs}}
+        <li><a href="{{path}}">{{name}}</a></li>
+      {{/npcs}}
+    </ul>
+  </div>
+</body>
+</html>
