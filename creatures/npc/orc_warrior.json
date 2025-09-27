@@ -1,6 +1,6 @@
 {
   "type": "NPC",
-  "name": "Orc Warrior",
+  "name": "Orc, Warrior",
   "description": "Orcs are strong humanoids who live in well-organized clan societies. Some are settled, digging vast tunnel systems deep beneath the woods and mountains; others wander the vast steppes of the world as nomads. Orcs often have a formidable appearance: glowing black eyes, fangs the size of a wild beast’s tusks, and hard, vaguely camouflage-patterned skin. They are fierce warriors, widely respected for their undeniable bravery and weapon proficiency both in melee and at range. But orcs are also extremely honor-oriented and have an unfortunate tendency to cause territorial disputes and never-ending blood feuds with dwarves, giants, and other kin.",
   "size": "NORMAL",
   "morale": 6,

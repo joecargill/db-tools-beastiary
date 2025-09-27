@@ -6,38 +6,51 @@ body {
   background-color: #fff8ea;  
 }
 
-h1 {
-  font-size: 2rem;
-  font-family: "Colus";
-}
-
-h2 {
-  font-size: 1.25rem;
-  font-family: "Colus"
-}
-
-h3 {
-  font-size: 1rem;
-  font-family: "Colus"
-}
-
-p {
-  font-family: "Crimson Pro", serif;
-}
-
 /* .container {
   max-width: 900px;
   margin: 0 auto;
 } */
 
-.license {
-  height: 50px;
-}
 
 .page-columns {
   column-count: 1;         /* default: single column on mobile */
       /* space between columns when desktop */
 }
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+}
+
+/* Logo must never exceed 50% viewport width */
+.header-bar .license {
+  height: auto;
+  width: 200px;
+  max-width: 45vw; /* min 100px, scale with viewport, max 200px */
+}
+
+/* Title */
+.header-bar h1 {
+  font-size: clamp(1.25rem, 5vw, 2rem);
+  margin: 0;
+  flex: 1;
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 600px) {
+  .header-bar {
+    flex-direction: column;   /* stack logo on top of title */
+    align-items: center;      /* center both */
+    text-align: center;
+  }
+
+  .header-bar h1 {
+    white-space: normal;      /* allow wrapping */
+  }
+}
+
 
 
 

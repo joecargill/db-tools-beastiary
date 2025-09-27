@@ -17,5 +17,44 @@ li a {
 }
 
 li a:hover {
-  color: #d22;
+  color: #00604D;
+  text-decoration: underline;
+}
+
+.index-columns {
+  column-width: 200px;     /* target column width */
+  column-gap: 2rem;        /* space between columns */
+}
+
+.index-section {
+  break-inside: avoid;     /* prevent splitting a section between columns */
+  margin-bottom: 1.5rem;
+}
+
+.index-section h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(85, 34, 0, 0.1);
+  border-bottom: 1px solid #000;
+  font-family: "Colus";        /* matches your headings */
+}
+
+
+.index-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.index-section li {
+  margin: 0.25rem 0 0 0.5rem;
+}
+
+/* Mobile: single column */
+@media (max-width: 767px) {
+  .index-columns {
+    column-width: auto;
+    column-count: 1;
+  }
 }

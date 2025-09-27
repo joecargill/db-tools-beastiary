@@ -1,19 +1,16 @@
 {
   "type": "NPC",
-  "name": "Town Guard",
+  "name": "Guard, Town",
   "size": "NORMAL",
   "morale": 4,
   "move": 6,
-  "hp": 30,
+  "hp": 10,
   "armors": [
-    { "name": "Chain Mail", "rating": 4 }
+    { "name": "Leather", "rating": 2 }
   ],
   "skills": [
-    { "name": "Spot Hidden", "level": 5 },
-    { "name": "Riding", "level": 4 },
-    { "name": "Bluffing", "level": 3 }
+    { "name": "Awareness", "level": 10 }
   ],
-  "abilities": ["Patrol Duty"],
   "weapons": [
     { "name": "Spear", "level": 8, "damage": "1d10", "durability": 10 }
   ],

@@ -1,0 +1,26 @@
+{
+  "type": "MONSTER",
+  "name": "Basilisk",
+  "ferocity": 2,
+  "morale": 9,
+  "size": "LARGE",
+  "move": 20,
+  "hp": 20,
+  "attacks": [
+    {
+      "result": "1-2",
+      "name": "Lashing Tentacles",
+      "description": "2d6 bludgeoning damage."
+    },
+    {
+      "result": "3-4",
+      "name": "Venemous Mandibles",
+      "description": "Bite inflicting 2d4 + 12 potency paralysis poison."
+    },
+    {
+      "result": "5-6",
+      "name": "Ram and Slam",
+      "description": "1d8 bludgeoning damage, target knocked back 4m, and knocked prone."
+    }
+  ]
+}

@@ -7,19 +7,22 @@ export default function buildIndexPage() {
   const publicDir = path.resolve("public");
   const templateSource = fs.readFileSync(path.resolve("templates/index.html"), "utf-8");
 
-  // Compile the Handlebars template
   const template = Handlebars.compile(templateSource);
-
   const metadata = getCreatureMetadata();
 
-  const grouped = {
-    monsters: metadata.filter((c) => c.type === "monster"),
-    npcs: metadata.filter((c) => c.type === "npc"),
-  };
+  // Sort alphabetically by name
+  metadata.sort((a, b) => a.name.localeCompare(b.name));
 
-  // Render the template with grouped data
-  const html = template(grouped);
+  // Group by first letter
+  const grouped = {};
+  metadata.forEach((creature) => {
+    const letter = creature.name[0].toUpperCase();
+    if (!grouped[letter]) grouped[letter] = [];
+    grouped[letter].push(creature);
+  });
+
+  const html = template({ grouped });
 
   fs.writeFileSync(path.join(publicDir, "index.html"), html);
-  console.log("✅ Main index.html generated!");
+  console.log("✅ Main index.html generated (grouped by letter)!");
 }
