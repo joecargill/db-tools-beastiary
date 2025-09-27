@@ -8,6 +8,8 @@
       "enum": ["MONSTER", "NPC"]
     },
     "name": { "type": "string" },
+    "description": { "type": "string" },
+    "morale": { "type": "integer" },
     "ferocity": { "type": "integer" },
     "size": { "type": "string", "enum": ["SMALL", "NORMAL", "LARGE", "HUGE", "SWARM"] },
     "move": { "type": "integer", "multipleOf": 2 },

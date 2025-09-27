@@ -1,49 +1,51 @@
-<h1>{{name}} (NPC)</h1>
+<h2><strong>NPC</strong></h2>
+<h1>{{name}}</h1>
 
-<p><strong>Size:</strong> {{size}}</p>
+<p><strong>Size:</strong> <span class="capitalized">{{size}}</span></p>
 <p><strong>Move:</strong> {{move}}</p>
 <p><strong>HP:</strong> {{hp}}</p>
 
-{{#skills}}
-<p><strong>Skill:</strong> {{name}} — Level {{level}}</p>
-{{/skills}}
+{{#if skills}}
+<p>Skills:</p>
+<ul>
+  {{#each skills}}
+    <li><span class="capitalized">{{name}}</span> ({{level}})</li>
+  {{/each}}
+</ul>
+{{/if}}
 
-{{#armors}}
+{{#if armors}}
 <h2>Armors</h2>
 <ul>
-  {{#armors}}
-  <li><strong>{{name}}:</strong> {{rating}}</li>
-  {{/armors}}
+  {{#each armors}}
+    <li>{{name}} ({{rating}})</li>
+  {{/each}}
 </ul>
-{{/armors}}
+{{/if}}
 
-{{#abilities}}
+{{#if abilities}}
 <h2>Abilities</h2>
 <ul>
-  {{#abilities}}
-  <li>{{.}}</li>
-  {{/abilities}}
+  {{#each abilities}}
+    <li>{{this}}</li>
+  {{/each}}
 </ul>
-{{/abilities}}
+{{/if}}
 
-{{#spells}}
+{{#if spells}}
 <h2>Spells</h2>
 <ul>
-  {{#spells}}
-  <li>{{.}}</li>
-  {{/spells}}
+  {{#each spells}}
+    <li>{{this}}</li>
+  {{/each}}
 </ul>
-{{/spells}}
+{{/if}}
 
-{{#effects}}
+{{#if effects}}
 <h2>Effects</h2>
 <ul>
-  {{#effects}}
-  <li><strong>{{name}}:</strong> {{description}}</li>
-  {{/effects}}
+  {{#each effects}}
+    <li><strong>{{name}}:</strong> {{description}}</li>
+  {{/each}}
 </ul>
-{{/effects}}
-
-{{#tags}}
-<p><strong>Tags:</strong> {{.}}</p>
-{{/tags}}
+{{/if}}

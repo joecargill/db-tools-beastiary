@@ -3,25 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>Dragonbane Bestiary</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles/typography.css">
   <link rel="stylesheet" href="/styles/main.css">
   <link rel="stylesheet" href="/styles/index.css">
 </head>
 <body>
   <div class="container">
-    <h1>Dragonbane Bestiary</h1>
-
+    <div class="d-flex">
+      <img class="license" src="/images/dragonbane-license-logo-red.png"/>
+      <h1>Dragonbane Bestiary</h1>
+    </div>
+    
     <h2>Monsters</h2>
     <ul>
-      {{#monsters}}
+      {{#each monsters}}
         <li><a href="{{path}}">{{name}}</a></li>
-      {{/monsters}}
+      {{/each}}
     </ul>
 
     <h2>NPCs</h2>
     <ul>
-      {{#npcs}}
+      {{#each npcs}}
         <li><a href="{{path}}">{{name}}</a></li>
-      {{/npcs}}
+      {{/each}}
     </ul>
   </div>
 </body>

@@ -1,38 +1,81 @@
-<h1>{{name}} (Monster)</h1>
+<h2 class=""><strong>MONSTER</strong></h2>
+<h1 class="db-green">{{name}}</h1>
 
-<p><strong>Ferocity:</strong> {{ferocity}}</p>
-<p><strong>Size:</strong> {{size}}</p>
-<p><strong>Move:</strong> {{move}}</p>
-<p><strong>Armor:</strong> {{armor}}</p>
-<p><strong>HP:</strong> {{hp}}</p>
 
-{{#skills}}
-<p><strong>Skill:</strong> {{name}} — Level {{level}}</p>
-{{/skills}}
+<p>
+  <term>Tags:</term>
+  {{#if tags}}
+  {{#each tags}}
+    {{this}}{{#unless @last}}, {{/unless}}
+  {{/each}}
+  {{else}}
+  —
+  {{/if}}
+</p>
 
-<h2>Attacks</h2>
-<table>
-  <tr>
-    <th>D6</th>
-    <th>Attack</th>
-  </tr>
-  {{#attacks}}
-  <tr>
-    <td>{{result}}</td>
-    <td><b>{{name}}!</b> {{description}}</td>
-  </tr>
-  {{/attacks}}
-</table>
 
-{{#effects}}
-<h2>Effects</h2>
-<ul>
-  {{#effects}}
-  <li><strong>{{name}}:</strong> {{description}}</li>
-  {{/effects}}
-</ul>
-{{/effects}}
+<hr>
 
-{{#tags}}
-<p><strong>Tags:</strong> {{.}}</p>
-{{/tags}}
+<div class="page-columns">
+
+  {{#if description}}
+  <div class="db-font-normal">
+    {{description}}
+  </div>
+  {{/if}}
+
+  <div class="stats-box | mt-4">
+    <table class="stats-table | db-font-normal">
+      <tr>
+        <td><term>Ferocity:</term> <span class="d-inline-block">{{ferocity}}</span></td>
+        <td><term>Size:</term> <span class="d-inline-block capitalized">{{size}}</span></td>
+        <td>{{#if morale}}<term>Morale:</term> <span class="d-inline-block">{{morale}}</span>{{/if}}</td>
+      </tr>
+
+      <tr>
+        <td><term>Move:</term> <span class="d-inline-block">{{move}}</span></td>
+        <td><term>Armor:</term> <span class="d-inline-block">{{#if armor}}{{armor}}{{else}}—{{/if}}
+        </span></td>
+        <td><term>HP:</term> <span class="d-inline-block">{{hp}}</span></td>
+      </tr>
+
+      {{#if skills}} 
+      <tr>
+        <td colspan="3">
+        <term class="me-1">Skills:</term>
+          {{#each skills}}
+          <span class="d-inline-block capitalized">{{name}} {{level}}</span>{{#unless @last}}, {{/unless}}
+          {{/each}}
+        </td>
+      </tr>
+      {{/if}}
+    </table>
+
+    {{#if effects}}
+    <div class="mt-3">
+      {{#each effects}}
+      <p>
+        <span class="me-1"><b>{{name}}:</b></span> {{description}}
+      </p>
+      {{/each}}
+    </div>
+    {{/if}}
+  </div>
+
+  <div class="mt-4">
+    <h3>Monster Attacks</h3>
+    <table class="attack-table | db-font-normal ">
+      <tr>
+        <th>D6</th>
+        <th>Attack</th>
+      </tr>
+      {{#each attacks}}
+      <tr>
+        <td>{{result}}</td>
+        <td><b>{{name}}!</b> {{description}}</td>
+      </tr>
+      {{/each}}
+    </table>
+  </div>
+
+</div>

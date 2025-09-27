@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/colus');
+
+.db-font-heading {
+  font-family: "colus";
+}
+
+.db-font-normal {
+  font-family: "Crimson Pro", serif;
+}
+
+.db-font-handwritten {
+  font-family: "Caveat";
+}
+
+.db-red {
+  color: #e72f32;
+}
+
+.db-green {
+  color: #00604D
+}
+
+.capitalized {
+  text-transform: lowercase; /* EXAMPLE → example */
+}
+.capitalized::first-letter {
+  text-transform: uppercase; /* example → Example */
+}

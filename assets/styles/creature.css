@@ -10,10 +10,85 @@ th, td {
   text-align: left;
 }
 
-strong {
+term {
   font-weight: bold;
+  font-family: "Colus";
+  margin-right: 0.25rem;
+  font-size: 0.8rem;
 }
 
 ul {
   margin: 0.25rem 0 1rem 1.25rem;
+}
+
+.attack-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attack-table th,
+.attack-table td {
+  padding: 8px 12px;
+  border: none;
+  text-align: left;
+}
+
+/* horizontal dividers only */
+.attack-table tr {
+  border-bottom: 1px solid #000;
+}
+
+.attack-table tr:first-child {
+  border-bottom: 2px solid #000;
+}
+
+.attack-table tr:last-child {
+  border-bottom: none;
+}
+
+/* alternating row backgrounds */
+.attack-table tr:nth-child(even) {
+  background-color: rgba(85, 34, 0, 0.13); /* change to any highlight color */
+}
+
+.attack-table tr:nth-child(odd) {
+  background-color: transparent;
+}
+
+
+.stats-box {
+  border: 1px solid #000;
+  padding: 20px;
+  background-color: #f4eabc;
+}
+
+.stats-table {
+  /* width: 100%; */
+  border-collapse: collapse;
+  padding: 0;
+  margin: 0;
+}
+
+.stats-table th,
+.stats-table td {
+  /* padding: 8px 12px; */
+  border: none;
+  text-align: left;
+}
+
+.stats-table tr {
+  border-bottom: 1px solid #000;
+}
+
+.stats-table tr:first-child {
+  border-top: 1px solid #000;
+}
+
+/* alternating row backgrounds */
+.stats-table tr:nth-child(even) {
+  background-color: transparent;
+}
+
+.stats-table tr:nth-child(odd) {
+  background-color: rgba(85, 34, 0, 0.1);
 }
