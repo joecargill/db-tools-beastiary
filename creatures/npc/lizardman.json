@@ -1,0 +1,16 @@
+{
+  "type": "NPC",
+  "name": "Lizardman",
+  "description": "Humanoid reptilian warrior, strong and agile in swampy terrain.",
+  "size": "NORMAL",
+  "move": 6,
+  "hp": 10,
+  "wp": 8,
+  "skills": [
+    { "name": "Awareness", "level": 6 }
+  ],
+  "weapons": [
+    { "name": "Spear", "level": 6, "damage": "1d6", "durability": 10 }
+  ],
+  "tags": ["humanoid", "reptile"]
+}

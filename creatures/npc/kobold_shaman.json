@@ -1,0 +1,19 @@
+{
+  "type": "NPC",
+  "name": "Kobold, Shaman",
+  "description": "A spellcasting kobold who supports allies with magic and trickery.",
+  "size": "SMALL",
+  "move": 6,
+  "hp": 6,
+  "wp": 10,
+  "skills": [
+    { "name": "Elementalism", "level": 10 },
+    { "name": "Languages", "level": 6 },
+    { "name": "Awareness", "level": 6 }
+  ],
+  "spells": ["Fetch", "Light", "Flick"],
+  "weapons": [
+    { "name": "Dagger", "level": 4, "damage": "1d4", "durability": 10 }
+  ],
+  "tags": ["humanoid"]
+}

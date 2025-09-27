@@ -1,0 +1,22 @@
+{
+  "type": "MONSTER",
+  "name": "Ooze",
+  "description": "A large, transparent ooze that engulfs and digests creatures.",
+  "size": "HUGE",
+  "move": 4,
+  "hp": 22,
+  "ferocity": 12,
+  "attacks": [
+    {
+      "name": "Engulf",
+      "description": "Engulfs target, dealing 1d6 acid damage per round.",
+      "result": "1-2"
+    },
+    {
+      "name": "Pseudopod",
+      "description": "Slams a pseudopod at target, dealing 1d4 damage.",
+      "result": "3-6"
+    }
+  ],
+  "tags": ["ooze"]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "NPC",
+  "name": "Elf, Warrior",
+  "description": "Graceful humanoid fighter with long life and keen senses.",
+  "size": "NORMAL",
+  "move": 6,
+  "hp": 8,
+  "wp": 10,
+  "skills": [
+    { "name": "Awareness", "level": 6 }
+  ],
+  "weapons": [
+    { "name": "Long Sword", "level": 8, "damage": "1d8", "durability": 10 },
+    { "name": "Long Bow", "level": 8, "damage": "1d6", "durability": 10 }
+  ],
+  "tags": ["humanoid", "elf"]
+}

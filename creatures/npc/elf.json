@@ -1,0 +1,18 @@
+{
+  "type": "NPC",
+  "name": "Elf",
+  "description": "A graceful and agile humanoid with keen senses and a deep connection to nature.",
+  "size": "NORMAL",
+  "move": 6,
+  "hp": 12,
+  "wp": 14,
+  "skills": [
+    { "name": "Awareness", "level": 12 },
+    { "name": "Languages", "level": 10 }
+  ],
+  "weapons": [
+    { "name": "Short Bow", "level": 8, "damage": "1d6", "durability": 8 }
+  ],
+  "spells": ["Scrying", "Ensnaring Roots"],
+  "tags": ["elf", "ranger"]
+}

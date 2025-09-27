@@ -1,0 +1,27 @@
+{
+  "type": "MONSTER",
+  "name": "Wyvern",
+  "description": "A dragon-like creature with a poisonous tail stinger and large wings.",
+  "size": "HUGE",
+  "move": 8,
+  "hp": 45,
+  "ferocity": 16,
+  "attacks": [
+    {
+      "name": "Claw",
+      "description": "Wyvern slashes with sharp claws, dealing 1d8 damage.",
+      "result": "1-2"
+    },
+    {
+      "name": "Bite",
+      "description": "Wyvern bites its target, dealing 1d10 damage.",
+      "result": "3-4"
+    },
+    {
+      "name": "Tail Stinger",
+      "description": "Wyvern strikes with a poisonous tail, dealing 1d6 damage plus poison.",
+      "result": "5-6"
+    }
+  ],
+  "tags": ["dragon", "flying", "poison"]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "MONSTER",
+  "name": "Bear",
+  "description": "A large, powerful mammal known for its strength and ferocity.",
+  "size": "LARGE",
+  "move": 6,
+  "hp": 24,
+  "ferocity": 10,
+  "attacks": [
+    {
+      "name": "Claw",
+      "description": "Bear swipes with its claws, dealing 1d6 damage per claw.",
+      "result": "1-2"
+    },
+    {
+      "name": "Bite",
+      "description": "Bear bites its target, dealing 1d8 damage.",
+      "result": "3-6"
+    }
+  ],
+  "tags": ["beast"]
+}

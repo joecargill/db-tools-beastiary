@@ -6,7 +6,7 @@
     "build": "node scripts/build.js",
     "validate": "node scripts/validate.js",
     "serve": "live-server public",
-    "watch": "onchange \"schemas/**/*\" \"creatures/**/*\" \"templates/**/*\" \"assets/**/*\" -- npm run build",
+    "watch": "onchange \"schemas/**/*\" \"creatures/**/*\" \"templates/**/*\" \"assets/**/*\" \"references/**/*\" \"scripts/**/*\" -- npm run build",
     "dev": "npm run build && concurrently \"npm run watch\" \"npm run serve\""
   },
   "dependencies": {

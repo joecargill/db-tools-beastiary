@@ -1,0 +1,16 @@
+{
+  "type": "NPC",
+  "name": "Orc, Warleader",
+  "description": "A brutal orc with tactical knowledge, leading raiding parties with strength and skill.",
+  "size": "NORMAL",
+  "move": 6,
+  "hp": 14,
+  "wp": 10,
+  "skills": [
+    { "name": "Evade", "level": 6 }
+  ],
+  "weapons": [
+    { "name": "Axe", "level": 8, "damage": "1d6", "durability": 10 }
+  ],
+  "tags": ["humanoid"]
+}
