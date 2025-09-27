@@ -3,12 +3,10 @@
   "name": "Dwarf, Warrior",
   "description": "Stocky humanoid with endurance and skill in close combat.",
   "size": "NORMAL",
-  "move": 5,
+  "move": 10,
   "hp": 12,
   "wp": 10,
   "skills": [
-    { "name": "Axe", "level": 8 },
-    { "name": "Hammer", "level": 6 },
     { "name": "Awareness", "level": 5 }
   ],
   "weapons": [

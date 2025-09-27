@@ -7,8 +7,7 @@
   "hp": 4,
   "wp": 6,
   "skills": [
-    { "name": "Sneaking", "level": 10 },
-    { "name": "Sling", "level": 6 }
+    { "name": "Sneaking", "level": 10 }
   ],
   "weapons": [
     { "name": "Dagger", "level": 4, "damage": "1d4", "durability": 10 },

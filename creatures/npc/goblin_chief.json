@@ -7,9 +7,7 @@
   "hp": 8,
   "wp": 8,
   "skills": [
-    { "name": "Short Sword", "level": 6 },
-    { "name": "Bow", "level": 6 },
-    { "name": "Tactics", "level": 6 }
+    { "name": "Bluffing", "level": 6 }
   ],
   "weapons": [
     { "name": "Short Sword", "level": 6, "damage": "1d4", "durability": 10 },

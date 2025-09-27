@@ -8,7 +8,6 @@
   "wp": 10,
   "skills": [
     { "name": "Elementalism", "level": 8 },
-    { "name": "Spear", "level": 6 },
     { "name": "Awareness", "level": 6 }
   ],
   "spells": ["Birdsong", "Heal Wound"],

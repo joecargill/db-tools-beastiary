@@ -7,8 +7,6 @@
   "hp": 8,
   "wp": 10,
   "skills": [
-    { "name": "Sword", "level": 8 },
-    { "name": "Bow", "level": 8 },
     { "name": "Awareness", "level": 6 }
   ],
   "weapons": [

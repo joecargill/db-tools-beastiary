@@ -8,10 +8,11 @@
   "wp": 14,
   "skills": [
     { "name": "Awareness", "level": 12 },
-    { "name": "Sneaking", "level": 12 },
     { "name": "Languages", "level": 10 }
   ],
-  "attacks": false,
-  "spells": ["Detect Magic", "Invisibility", "Entangle"],
+  "weapons": [
+    { "name": "Short Bow", "level": 8, "damage": "1d6", "durability": 8 }
+  ],
+  "spells": ["Scrying", "Ensnaring Roots"],
   "tags": ["elf", "ranger"]
 }

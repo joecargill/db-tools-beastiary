@@ -10,7 +10,9 @@
     { "name": "Healing", "level": 12 },
     { "name": "Languages", "level": 10 }
   ],
-  "attacks": false,
-  "spells": ["Cure Light Wounds", "Bless", "Protection from Evil"],
+  "weapons": [
+    { "name": "Dagger", "level": 10, "damage": "1d6", "durability": 10 }
+  ],
+  "spells": ["Treat Wound"],
   "tags": ["cleric", "support"]
 }

@@ -7,7 +7,6 @@
   "hp": 10,
   "wp": 8,
   "skills": [
-    { "name": "Combat", "level": 10 },
     { "name": "Awareness", "level": 6 }
   ],
   "weapons": [
