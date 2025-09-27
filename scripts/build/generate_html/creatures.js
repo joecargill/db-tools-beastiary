@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { globSync } from "glob";
-import Mustache from "mustache";
+import Handlebars from "handlebars";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,8 +12,9 @@ export default function buildCreaturePages() {
   const publicDir = path.resolve(__dirname, "../../../public");
   const templatesDir = path.resolve(__dirname, "../../../templates");
 
-  // Load the parent creature layout
-  const creatureLayout = fs.readFileSync(path.join(templatesDir, "creature.html"), "utf-8");
+  // Load and compile the parent creature layout
+  const creatureLayoutSource = fs.readFileSync(path.join(templatesDir, "creature.html"), "utf-8");
+  const creatureLayout = Handlebars.compile(creatureLayoutSource);
 
   // Remove old creature files
   ["monster", "npc"].forEach((type) => {
@@ -25,7 +26,8 @@ export default function buildCreaturePages() {
 
   ["monster", "npc"].forEach((type) => {
     const templatePath = path.join(templatesDir, `${type}.html`);
-    const template = fs.readFileSync(templatePath, "utf-8");
+    const templateSource = fs.readFileSync(templatePath, "utf-8");
+    const template = Handlebars.compile(templateSource);
 
     const files = globSync(`${type}/*.json`, { cwd: rootDir });
 
@@ -38,10 +40,10 @@ export default function buildCreaturePages() {
       fs.mkdirSync(creatureDir, { recursive: true });
 
       // Render the inner template (monster.html or npc.html)
-      const innerHtml = Mustache.render(template, data);
+      const innerHtml = template(data);
 
       // Wrap with creature.html layout
-      const finalHtml = Mustache.render(creatureLayout, { content: innerHtml, name: data.name, type });
+      const finalHtml = creatureLayout({ content: innerHtml, name: data.name, type });
 
       fs.writeFileSync(path.join(creatureDir, "index.html"), finalHtml);
       console.log(`✅ Generated ${type} HTML: ${name}`);

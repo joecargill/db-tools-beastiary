@@ -2,6 +2,7 @@
   "type": "NPC",
   "name": "Town Guard",
   "size": "NORMAL",
+  "morale": 4,
   "move": 6,
   "hp": 30,
   "armors": [

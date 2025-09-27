@@ -2,6 +2,7 @@
   "type": "NPC",
   "name": "Orc Warrior",
   "size": "NORMAL",
+  "morale": 6,
   "move": 6,
   "hp": 45,
   "wp": 10,

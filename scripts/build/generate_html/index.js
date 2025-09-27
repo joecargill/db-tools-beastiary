@@ -1,11 +1,14 @@
 import fs from "fs";
 import path from "path";
-import Mustache from "mustache";
+import Handlebars from "handlebars";
 import { getCreatureMetadata } from "../metadata.js";
 
 export default function buildIndexPage() {
   const publicDir = path.resolve("public");
-  const template = fs.readFileSync(path.resolve("templates/index.html"), "utf-8");
+  const templateSource = fs.readFileSync(path.resolve("templates/index.html"), "utf-8");
+
+  // Compile the Handlebars template
+  const template = Handlebars.compile(templateSource);
 
   const metadata = getCreatureMetadata();
 
@@ -14,7 +17,9 @@ export default function buildIndexPage() {
     npcs: metadata.filter((c) => c.type === "npc"),
   };
 
-  const html = Mustache.render(template, grouped);
+  // Render the template with grouped data
+  const html = template(grouped);
+
   fs.writeFileSync(path.join(publicDir, "index.html"), html);
   console.log("✅ Main index.html generated!");
 }

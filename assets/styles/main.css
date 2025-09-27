@@ -1,20 +1,61 @@
+
+
 body {
-  font-family: sans-serif;
   line-height: 1.5;
   margin: 2rem;
+  background-color: #fff8ea;  
 }
 
 h1 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  font-family: "Colus";
 }
 
 h2 {
-  margin-top: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-family: "Colus"
 }
 
-.container {
+h3 {
+  font-size: 1rem;
+  font-family: "Colus"
+}
+
+p {
+  font-family: "Crimson Pro", serif;
+}
+
+/* .container {
   max-width: 900px;
   margin: 0 auto;
+} */
+
+.license {
+  height: 50px;
 }
+
+.page-columns {
+  column-count: 1;         /* default: single column on mobile */
+      /* space between columns when desktop */
+}
+
+
+
+/* Desktop layout: two columns */
+@media (min-width: 1024px) {
+  .page-columns {
+    column-count: 2;
+    column-gap: 20px;
+  }
+
+  .page-columns > div,
+  .page-columns > table {
+    display: block; 
+    break-inside: avoid;     /* prevent splitting across columns */
+    width: 100%;             /* fill the column */
+  }
+}
+
+
+
+
