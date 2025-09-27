@@ -1,23 +1,20 @@
-<h2 class=""><strong>MONSTER</strong></h2>
-<h1 class="db-green">{{name}}</h1>
-
-
-<p>
-  <term>Tags:</term>
-  {{#if tags}}
-  {{#each tags}}
-    {{this}}{{#unless @last}}, {{/unless}}
-  {{/each}}
-  {{else}}
-  —
-  {{/if}}
-</p>
-
-
-<hr>
+<div>
+  <h2 class=""><strong>MONSTER</strong></h2>
+  <h1 class="db-green">{{name}}</h1>
+  <p>
+    <term>Tags:</term>
+    {{#if tags}}
+    {{#each tags}}
+      {{this}}{{#unless @last}}, {{/unless}}
+    {{/each}}
+    {{else}}
+    —
+    {{/if}}
+  </p>
+  <hr>
+</div>
 
 <div class="page-columns">
-
   {{#if description}}
   <div class="db-font-normal">
     {{description}}
@@ -34,8 +31,7 @@
 
       <tr>
         <td><term>Move:</term> <span class="d-inline-block">{{move}}</span></td>
-        <td><term>Armor:</term> <span class="d-inline-block">{{#if armor}}{{armor}}{{else}}—{{/if}}
-        </span></td>
+        <td><term>Armor:</term> <span class="d-inline-block">{{#if armor}}{{armor}}{{else}}—{{/if}}</span></td>
         <td><term>HP:</term> <span class="d-inline-block">{{hp}}</span></td>
       </tr>
 
@@ -44,7 +40,7 @@
         <td colspan="3">
         <term class="me-1">Skills:</term>
           {{#each skills}}
-          <span class="d-inline-block capitalized">{{name}} {{level}}</span>{{#unless @last}}, {{/unless}}
+          <span class="d-inline-block">{{name}} {{level}}</span>{{#unless @last}}, {{/unless}}
           {{/each}}
         </td>
       </tr>
@@ -62,7 +58,7 @@
     {{/if}}
   </div>
 
-  <div class="mt-4">
+  <div class="mt-5 mt-lg-4">
     <h3>Monster Attacks</h3>
     <table class="attack-table | db-font-normal ">
       <tr>

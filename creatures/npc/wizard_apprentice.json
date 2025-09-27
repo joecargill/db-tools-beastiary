@@ -1,0 +1,21 @@
+{
+  "type": "NPC",
+  "name": "Wizard, Apprentice",
+  "description": "A fresh student in the magical arts, eager to test out the incantations they've studiously memorized for uncountable hours in dusty library rooms.",
+  "size": "NORMAL",
+  "morale": 4,
+  "move": 6,
+  "hp": 20,
+  "wp": 10,
+  "skills": [
+    { "name": "Elementalism", "level": 12},
+    { "name": "Languages", "level": 10 },
+    { "name": "Myth & Legend", "level": 12 },
+    { "name": "Riding", "level": 8 }
+  ],
+  "weapons": [
+    { "name": "Dagger", "level": 10, "damage": "1d6", "durability": 10 }
+  ],
+  "spells": ["Firebolt"],
+  "tags": ["wizard", "humanoid"]
+}

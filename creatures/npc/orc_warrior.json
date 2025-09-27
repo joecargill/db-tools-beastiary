@@ -1,23 +1,26 @@
 {
   "type": "NPC",
   "name": "Orc Warrior",
+  "description": "Orcs are strong humanoids who live in well-organized clan societies. Some are settled, digging vast tunnel systems deep beneath the woods and mountains; others wander the vast steppes of the world as nomads. Orcs often have a formidable appearance: glowing black eyes, fangs the size of a wild beast’s tusks, and hard, vaguely camouflage-patterned skin. They are fierce warriors, widely respected for their undeniable bravery and weapon proficiency both in melee and at range. But orcs are also extremely honor-oriented and have an unfortunate tendency to cause territorial disputes and never-ending blood feuds with dwarves, giants, and other kin.",
   "size": "NORMAL",
   "morale": 6,
   "move": 6,
   "hp": 45,
-  "wp": 10,
   "armors": [
     { "name": "Studded Leather", "rating": 2 },
     { "name": "Chain Mail", "rating": 4 }
   ],
-  "damage_bonus": "+2",
+  "damage_bonuses": [
+    { "type": "STR", "value": 2 },
+    { "type": "AGL", "value": 1 }
+  ],
   "resistance": "Physical",
   "immunity": "",
   "weakness": "Fire",
   "skills": [
-    { "name": "EVADE", "level": 6 },
-    { "name": "SPOT HIDDEN", "level": 5 },
-    { "name": "RIDING", "level": 3 }
+    { "name": "Evade", "level": 6 },
+    { "name": "Spot Hidden", "level": 5 },
+    { "name": "Riding", "level": 3 }
   ],
   "abilities": ["Berserk Charge"],
   "weapons": [
@@ -27,8 +30,8 @@
   "effects": [
     {
       "name": "Nocturnal",
-      "description": "In direct sunlight, orcs get a bane on all rolls and suffer D6 damage per stretch."
+      "description": " In direct sunlight, orcs get a bane on all rolls and suffer D6 damage per stretch. A thick layer of clouds or full-cover clothing are enough to avoid the effect.."
     }
   ],
-  "tags": ["orc", "warrior"]
+  "tags": ["orc", "humanoid", "warrior"]
 }

@@ -58,8 +58,13 @@ ul {
 
 .stats-box {
   border: 1px solid #000;
-  padding: 20px;
+  padding: 10px;
   background-color: #f4eabc;
+}
+@media (min-width: 1024px) {
+  .stats-box {
+    padding: 20px;
+  }
 }
 
 .stats-table {
@@ -71,9 +76,15 @@ ul {
 
 .stats-table th,
 .stats-table td {
-  /* padding: 8px 12px; */
+  padding: 4px 6px;
   border: none;
   text-align: left;
+}
+@media (min-width: 1024px) {
+  .stats-table th,
+  .stats-table td {
+    padding: 4px 12px;
+  }
 }
 
 .stats-table tr {

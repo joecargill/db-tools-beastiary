@@ -12,8 +12,11 @@
   "immunity": "Poison",
   "weakness": "Ice",
   "skills": [
-    { "name": "SPOT HIDDEN", "level": 10 },
-    { "name": "EVADE", "level": 6 }
+    { "name": "Spot Hidden", "level": 10 },
+    { "name": "Evade", "level": 6 },
+    { "name": "Awareness", "level": 18 },
+    { "name": "Myths & Legends", "level": 14 },
+    { "name": "Hunting & Fishing", "level": 12 }
   ],
   "attacks": [
     {
