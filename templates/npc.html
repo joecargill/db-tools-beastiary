@@ -1,51 +1,108 @@
-<h2><strong>NPC</strong></h2>
-<h1>{{name}}</h1>
+<div>
+  <h2 class=""><strong>NPC</strong></h2>
+  <h1 class="db-green">{{name}}</h1>
 
-<p><strong>Size:</strong> <span class="capitalized">{{size}}</span></p>
-<p><strong>Move:</strong> {{move}}</p>
-<p><strong>HP:</strong> {{hp}}</p>
+  <p>
+    <term>Tags:</term>
+    {{#if tags}}
+    {{#each tags}}
+      {{this}}{{#unless @last}}, {{/unless}}
+    {{/each}}
+    {{else}}
+    —
+    {{/if}}
+  </p>
+  <hr>
+</div>
 
-{{#if skills}}
-<p>Skills:</p>
-<ul>
-  {{#each skills}}
-    <li><span class="capitalized">{{name}}</span> ({{level}})</li>
-  {{/each}}
-</ul>
-{{/if}}
+<div class="page-columns">
+  {{#if description}}
+  <div class="db-font-normal">
+    {{description}}
+  </div>
+  {{/if}}
 
-{{#if armors}}
-<h2>Armors</h2>
-<ul>
-  {{#each armors}}
-    <li>{{name}} ({{rating}})</li>
-  {{/each}}
-</ul>
-{{/if}}
+  <div class="stats-box | mt-4">
+    <table class="stats-table | db-font-normal">
+      <tr>
+        <td><term>Morale:</term> <span class="d-inline-block">{{#if morale}}{{morale}}{{else}}—{{/if}}</span></td>
+        <td colspan="2"><term>D. Bonus:</term> <span class="d-inline-block">{{#if damage_bonuses}}{{#each damage_bonuses}}{{type}}+{{value}}{{#unless @last}}, {{/unless}}{{/each}}{{else}}—{{/if}}</span></td>
+      </tr>
+      <tr>
+        <td><term>Move:</term> <span class="d-inline-block">{{move}}</span></td>
+        <td colspan="2">
+          <term>HP:</term> <span class="d-inline-block">{{hp}}</span>
+          <term class="ms-2">WP:</term> <span class="d-inline-block">{{#if wp}}{{wp}}{{else}}—{{/if}}</span>
+        </td>
+        
+      </tr>
 
-{{#if abilities}}
-<h2>Abilities</h2>
-<ul>
-  {{#each abilities}}
-    <li>{{this}}</li>
-  {{/each}}
-</ul>
-{{/if}}
+      {{#if skills}}
+      <tr>
+        <td colspan="3">
+          <term class="me-1">Skills:</term>
+          {{#each skills}}
+          <span class="d-inline-block capitalized">{{name}} {{level}}</span>{{#unless @last}}, {{/unless}}
+          {{/each}}
+        </td>
+      </tr>
+      {{/if}}
 
-{{#if spells}}
-<h2>Spells</h2>
-<ul>
-  {{#each spells}}
-    <li>{{this}}</li>
-  {{/each}}
-</ul>
-{{/if}}
+      {{#if abilities}}
+      <tr>
+        <td colspan="3">
+          <term class="me-1">Abilities:</term>
+          {{#each abilities}}
+          <span class="d-inline-block capitalized">{{this}}</span>{{#unless @last}}, {{/unless}}
+          {{/each}}
+        </td>
+      </tr>
+      {{/if}}
 
-{{#if effects}}
-<h2>Effects</h2>
-<ul>
-  {{#each effects}}
-    <li><strong>{{name}}:</strong> {{description}}</li>
-  {{/each}}
-</ul>
-{{/if}}
+      {{#if spells}}
+      <tr>
+        <td colspan="3">
+          <term class="me-1">Spells:</term>
+          {{#each spells}}
+          <span class="d-inline-block capitalized">{{this}}</span>{{#unless @last}}, {{/unless}}
+          {{/each}}
+        </td>
+      </tr>
+      {{/if}}
+    
+
+      {{#if armors}}
+      <tr>
+        <td colspan="3">
+          <term class="me-1">Typical Armor:</term>
+          {{#each armors}}
+          <span class="d-inline-block">{{name}} ({{rating}})</span>{{#unless @last}}, {{/unless}}
+          {{/each}}
+        </td>
+      </tr>
+      {{/if}}
+
+      {{#if weapons}}
+      <tr>
+        <td colspan="3">
+          <term class="me-1">Typical Weapons:</term>
+          {{#each weapons}}
+          <span class="d-inline-block">{{name}} ({{damage}})</span>{{#unless @last}}, {{/unless}}
+          {{/each}}
+        </td>
+      </tr>
+      {{/if}}
+    </table>
+
+    {{#if effects}}
+    <div class="mt-3 db-font-normal">
+      {{#each effects}}
+      <p>
+        <span class="me-1"><b>{{name}}:</b></span> {{description}}
+      </p>
+      {{/each}}
+    </div>
+    {{/if}}
+  </div>
+
+</div>

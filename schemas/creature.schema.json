@@ -16,7 +16,6 @@
     "hp": { "type": "integer" },
     "wp": { "type": "integer" },
     "armor": { "type": "integer" },
-    "damage_bonus": { "type": "string" },
     "resistance": { "type": "string" },
     "immunity": { "type": "string" },
     "weakness": { "type": "string" },
@@ -29,7 +28,34 @@
       "items": {
         "type": "object",
         "properties": {
-          "name": { "type": "string" },
+          "name": {
+            "type": "string",
+            "enum": [
+              "Acrobatics",
+              "Awareness",
+              "Bartering",
+              "Beast Lore",
+              "Bluffing",
+              "Bushcraft",
+              "Crafting",
+              "Evade",
+              "Healing",
+              "Hunting & Fishing",
+              "Languages",
+              "Myths & Legends",
+              "Performance",
+              "Persuasion",
+              "Riding",
+              "Seamanship",
+              "Sleight of Hand",
+              "Sneaking",
+              "Spot Hidden",
+              "Swimming",
+              "Animism",
+              "Mentalism",
+              "Elementalism"
+            ]
+          },
           "level": { "type": "integer" }
         },
         "required": ["name", "level"],
@@ -94,6 +120,24 @@
         "required": ["name", "rating"],
         "additionalProperties": false
       }
+    },
+    "damage_bonuses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "STR",
+              "AGL"
+            ]
+          },
+          "value": { "type": "integer" }
+        },
+        "required": ["type", "value"],
+        "additionalProperties": false
+      }
     }
   },
   "required": ["type", "name", "size", "move", "hp"],
@@ -106,14 +150,14 @@
         "properties": {
           "wp": false,
           "armor": { "type": "integer" },
-          "damage_bonus": { "type": "string" },
           "resistance": { "type": "string" },
           "immunity": { "type": "string" },
           "weakness": { "type": "string" },
           "abilities": false,
           "spells": false,
           "weapons": false,
-          "armors": false
+          "armors": false,
+          "damage_bonuses": false
         }
       }
     },
