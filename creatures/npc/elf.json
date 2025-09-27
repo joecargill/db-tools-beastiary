@@ -1,0 +1,17 @@
+{
+  "type": "NPC",
+  "name": "Elf",
+  "description": "A graceful and agile humanoid with keen senses and a deep connection to nature.",
+  "size": "NORMAL",
+  "move": 6,
+  "hp": 12,
+  "wp": 14,
+  "skills": [
+    { "name": "Awareness", "level": 12 },
+    { "name": "Sneaking", "level": 12 },
+    { "name": "Languages", "level": 10 }
+  ],
+  "attacks": false,
+  "spells": ["Detect Magic", "Invisibility", "Entangle"],
+  "tags": ["elf", "ranger"]
+}

@@ -1,0 +1,27 @@
+{
+  "type": "MONSTER",
+  "name": "Dragon, Red, Young",
+  "description": "A small, but fiery and aggressive dragon with a breath weapon.",
+  "size": "HUGE",
+  "move": 6,
+  "hp": 50,
+  "ferocity": 18,
+  "attacks": [
+    {
+      "name": "Claw",
+      "description": "Dragon slashes with claws, dealing 1d8 damage.",
+      "result": "1-2"
+    },
+    {
+      "name": "Bite",
+      "description": "Dragon bites with sharp teeth, dealing 1d10 damage.",
+      "result": "3-4"
+    },
+    {
+      "name": "Fire Breath",
+      "description": "Dragon exhales fire in a cone, dealing 2d6 fire damage.",
+      "result": "5-6"
+    }
+  ],
+  "tags": ["dragon", "fire"]
+}

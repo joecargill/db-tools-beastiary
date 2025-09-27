@@ -10,12 +10,12 @@
   "skills": [
     { "name": "Elementalism", "level": 12},
     { "name": "Languages", "level": 10 },
-    { "name": "Myth & Legend", "level": 12 },
+    { "name": "Myths & Legends", "level": 12 },
     { "name": "Riding", "level": 8 }
   ],
   "weapons": [
     { "name": "Dagger", "level": 10, "damage": "1d6", "durability": 10 }
   ],
-  "spells": ["Firebolt"],
+  "spells": ["Lightning Flash"],
   "tags": ["wizard", "humanoid"]
 }

@@ -11,6 +11,14 @@ body {
   margin: 0 auto;
 } */
 
+.link-source {
+  color: #000;
+  text-decoration: none;
+  font-weight: 300;
+}
+.link-source:hover {
+  text-decoration: underline;
+}
 
 .page-columns {
   column-count: 1;         /* default: single column on mobile */

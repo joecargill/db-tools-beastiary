@@ -1,0 +1,19 @@
+{
+  "type": "NPC",
+  "name": "Orc, Shaman",
+  "description": "An orcic spellcaster, calling upon dark magic to aid allies or curse foes.",
+  "size": "NORMAL",
+  "move": 6,
+  "hp": 12,
+  "wp": 12,
+  "skills": [
+    { "name": "Elementalism", "level": 8 },
+    { "name": "Languages", "level": 6 },
+    { "name": "Awareness", "level": 6 }
+  ],
+  "spells": ["Fireball", "Lightning Bolt"],
+  "weapons": [
+    { "name": "Club", "level": 6, "damage": "1d6", "durability": 10 }
+  ],
+  "tags": ["humanoid", "orc"]
+}

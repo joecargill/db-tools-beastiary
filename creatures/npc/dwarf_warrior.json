@@ -1,0 +1,19 @@
+{
+  "type": "NPC",
+  "name": "Dwarf, Warrior",
+  "description": "Stocky humanoid with endurance and skill in close combat.",
+  "size": "NORMAL",
+  "move": 5,
+  "hp": 12,
+  "wp": 10,
+  "skills": [
+    { "name": "Axe", "level": 8 },
+    { "name": "Hammer", "level": 6 },
+    { "name": "Awareness", "level": 5 }
+  ],
+  "weapons": [
+    { "name": "Battle Axe", "level": 8, "damage": "1d8", "durability": 10 },
+    { "name": "Warhammer", "level": 6, "damage": "1d6", "durability": 10 }
+  ],
+  "tags": ["humanoid", "dwarf"]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "MONSTER",
+  "name": "Snake, Giant",
+  "description": "A massive serpent capable of constricting and venomous strikes.",
+  "size": "LARGE",
+  "move": 6,
+  "hp": 16,
+  "ferocity": 8,
+  "attacks": [
+    {
+      "name": "Bite",
+      "description": "Giant Snake bites the target, dealing 1d6 damage. Target must save vs. poison or take an additional 1d6 poison damage.",
+      "result": "1-4"
+    },
+    {
+      "name": "Constriction",
+      "description": "Wraps around target, dealing 1d6 crushing damage.",
+      "result": "5-6"
+    }
+  ],
+  "tags": ["beast", "reptile"]
+}
