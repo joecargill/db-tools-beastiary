@@ -11,24 +11,23 @@
 </head>
 <body>
   <div class="container">
-    <div class="d-flex">
-      <img class="license" src="/images/dragonbane-license-logo-red.png"/>
-      <h1>Dragonbane Bestiary</h1>
+    <div class="header-bar mb-4">
+      <img class="license me-3" src="/images/dragonbane-license-logo-red.png"/>
+      <h1 class="db-green">Homebrew Creature Reference</h1>
     </div>
-    
-    <h2>Monsters</h2>
-    <ul>
-      {{#each monsters}}
-        <li><a href="{{path}}">{{name}}</a></li>
-      {{/each}}
-    </ul>
 
-    <h2>NPCs</h2>
-    <ul>
-      {{#each npcs}}
-        <li><a href="{{path}}">{{name}}</a></li>
+    <div class="index-columns">
+      {{#each grouped}}
+        <div class="index-section">
+          <h2>{{@key}}</h2>
+          <ul>
+            {{#each this}}
+              <li><h4 class="mb-0"><a class="index-link" href="{{path}}">{{name}}</a></h4></li>
+            {{/each}}
+          </ul>
+        </div>
       {{/each}}
-    </ul>
+    </div>
   </div>
 </body>
 </html>

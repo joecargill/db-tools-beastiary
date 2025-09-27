@@ -1,0 +1,21 @@
+{
+  "type": "NPC",
+  "name": "Wizard, Arch",
+  "description": "A master magician, supremely skilled in the schools of magic they have studied their entire lives. Incredibly talented spellcasters.",
+  "size": "NORMAL",
+  "morale": 4,
+  "move": 6,
+  "hp": 20,
+  "wp": 10,
+  "skills": [
+    { "name": "Elementalism", "level": 18},
+    { "name": "Languages", "level": 16 },
+    { "name": "Myth & Legend", "level": 18 },
+    { "name": "Riding", "level": 12 }
+  ],
+  "weapons": [
+    { "name": "Staff", "level": 12, "damage": "1d10", "durability": 10 }
+  ],
+  "spells": ["Fireball", "Levitate", "Teleport"],
+  "tags": ["wizard", "humanoid"]
+}

@@ -1,6 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Caveat:wght@400..700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/colus');
 
+h1 {
+  font-size: 2rem;
+  font-family: "Colus";
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-family: "Colus"
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-family: "Colus"
+}
+
+h4 {
+  font-size: 1rem;
+  font-family: "Crimson Pro", serif;
+  font-weight: 600;
+}
+
+p {
+  font-family: "Crimson Pro", serif;
+}
+
 .db-font-heading {
   font-family: "colus";
 }
