@@ -21,6 +21,12 @@
       "level": 8
     }
   ],
+  "effects": [
+    {
+      "name": "Territorial",
+      "description": "Will defend their lair with threats and, if this is ignored, violence."
+    }
+  ],
   "attacks": [
     {
       "name": "Pummel",
@@ -36,12 +42,6 @@
       "name": "Rock Throw",
       "result": "5-6",
       "description": "Hurls a heavy rock with great strength at the closest target, dealing 1d8 bludgeoning damage and knocking prone. If the Ape is already grappling a creature, it throws them instead."
-    }
-  ],
-  "effects": [
-    {
-      "name": "Territorial",
-      "description": "Will defend their lair with threats and, if this is ignored, violence."
     }
   ]
 }
