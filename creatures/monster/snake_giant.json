@@ -2,10 +2,14 @@
   "type": "MONSTER",
   "name": "Snake, Giant",
   "description": "A massive serpent capable of constricting and venomous strikes.",
+  "ferocity": 8,
   "size": "LARGE",
   "move": 6,
   "hp": 16,
-  "ferocity": 8,
+  "tags": [
+    "beast",
+    "reptile"
+  ],
   "attacks": [
     {
       "name": "Bite",
@@ -17,6 +21,5 @@
       "description": "Wraps around target, dealing 1d6 crushing damage.",
       "result": "5-6"
     }
-  ],
-  "tags": ["beast", "reptile"]
+  ]
 }

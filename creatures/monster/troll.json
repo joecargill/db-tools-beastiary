@@ -2,10 +2,14 @@
   "type": "MONSTER",
   "name": "Troll",
   "description": "A regenerating giant, difficult to kill unless fire or acid is used.",
+  "ferocity": 16,
   "size": "HUGE",
   "move": 6,
   "hp": 35,
-  "ferocity": 16,
+  "tags": [
+    "giant",
+    "regenerating"
+  ],
   "attacks": [
     {
       "name": "Claw",
@@ -17,6 +21,5 @@
       "description": "Troll bites the target, dealing 1d8 damage.",
       "result": "4-6"
     }
-  ],
-  "tags": ["giant", "regenerating"]
+  ]
 }

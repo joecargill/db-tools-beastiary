@@ -6,13 +6,29 @@
   "move": 6,
   "hp": 10,
   "wp": 12,
+  "tags": [
+    "cleric",
+    "support"
+  ],
   "skills": [
-    { "name": "Healing", "level": 12 },
-    { "name": "Languages", "level": 10 }
+    {
+      "name": "Healing",
+      "level": 12
+    },
+    {
+      "name": "Languages",
+      "level": 10
+    }
+  ],
+  "spells": [
+    "Treat Wound"
   ],
   "weapons": [
-    { "name": "Dagger", "level": 10, "damage": "1d6", "durability": 10 }
-  ],
-  "spells": ["Treat Wound"],
-  "tags": ["cleric", "support"]
+    {
+      "name": "Dagger",
+      "level": 10,
+      "damage": "1d6",
+      "durability": 10
+    }
+  ]
 }

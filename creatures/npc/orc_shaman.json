@@ -6,14 +6,34 @@
   "move": 6,
   "hp": 12,
   "wp": 12,
+  "tags": [
+    "humanoid",
+    "orc"
+  ],
   "skills": [
-    { "name": "Elementalism", "level": 8 },
-    { "name": "Languages", "level": 6 },
-    { "name": "Awareness", "level": 6 }
+    {
+      "name": "Elementalism",
+      "level": 8
+    },
+    {
+      "name": "Languages",
+      "level": 6
+    },
+    {
+      "name": "Awareness",
+      "level": 6
+    }
   ],
-  "spells": ["Fireball", "Lightning Bolt"],
+  "spells": [
+    "Fireball",
+    "Lightning Bolt"
+  ],
   "weapons": [
-    { "name": "Club", "level": 6, "damage": "1d6", "durability": 10 }
-  ],
-  "tags": ["humanoid", "orc"]
+    {
+      "name": "Club",
+      "level": 6,
+      "damage": "1d6",
+      "durability": 10
+    }
+  ]
 }

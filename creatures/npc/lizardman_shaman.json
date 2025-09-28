@@ -6,14 +6,36 @@
   "move": 6,
   "hp": 12,
   "wp": 10,
+  "tags": [
+    "humanoid",
+    "reptile"
+  ],
   "skills": [
-    { "name": "Elementalism", "level": 8 },
-    { "name": "Awareness", "level": 6 }
+    {
+      "name": "Elementalism",
+      "level": 8
+    },
+    {
+      "name": "Awareness",
+      "level": 6
+    }
   ],
-  "spells": ["Birdsong", "Heal Wound"],
+  "spells": [
+    "Birdsong",
+    "Heal Wound"
+  ],
   "weapons": [
-    { "name": "Spear", "level": 6, "damage": "1d6", "durability": 10 },
-    { "name": "Claw", "level": 4, "damage": "1d4", "durability": 10 }
-  ],
-  "tags": ["humanoid", "reptile"]
+    {
+      "name": "Spear",
+      "level": 6,
+      "damage": "1d6",
+      "durability": 10
+    },
+    {
+      "name": "Claw",
+      "level": 4,
+      "damage": "1d4",
+      "durability": 10
+    }
+  ]
 }

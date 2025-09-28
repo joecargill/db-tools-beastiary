@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "node scripts/build.js",
+    "format": "node scripts/format.js",
     "validate": "node scripts/validate.js",
+    "build": "node scripts/build.js",
     "serve": "live-server public",
     "watch": "onchange \"schemas/**/*\" \"creatures/**/*\" \"templates/**/*\" \"assets/**/*\" \"references/**/*\" \"scripts/**/*\" -- npm run build",
     "dev": "npm run build && concurrently \"npm run watch\" \"npm run serve\""

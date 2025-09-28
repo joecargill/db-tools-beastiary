@@ -39,6 +39,10 @@ p {
   font-family: "Caveat";
 }
 
+.db-font-small {
+  font-size: 0.5rem;
+}
+
 .db-red {
   color: #e72f32;
 }

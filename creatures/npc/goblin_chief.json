@@ -6,12 +6,27 @@
   "move": 6,
   "hp": 8,
   "wp": 8,
+  "tags": [
+    "humanoid"
+  ],
   "skills": [
-    { "name": "Bluffing", "level": 6 }
+    {
+      "name": "Bluffing",
+      "level": 6
+    }
   ],
   "weapons": [
-    { "name": "Short Sword", "level": 6, "damage": "1d4", "durability": 10 },
-    { "name": "Short Bow", "level": 6, "damage": "1d4", "durability": 10 }
-  ],
-  "tags": ["humanoid"]
+    {
+      "name": "Short Sword",
+      "level": 6,
+      "damage": "1d4",
+      "durability": 10
+    },
+    {
+      "name": "Short Bow",
+      "level": 6,
+      "damage": "1d4",
+      "durability": 10
+    }
+  ]
 }

@@ -2,10 +2,14 @@
   "type": "MONSTER",
   "name": "Spider, Giant",
   "description": "A huge, venomous spider that hunts by ambush.",
+  "ferocity": 10,
   "size": "LARGE",
   "move": 6,
   "hp": 18,
-  "ferocity": 10,
+  "tags": [
+    "beast",
+    "arachnid"
+  ],
   "attacks": [
     {
       "name": "Bite",
@@ -17,6 +21,5 @@
       "description": "Spider shoots webbing; target must save vs. paralysis or be restrained.",
       "result": "5-6"
     }
-  ],
-  "tags": ["beast", "arachnid"]
+  ]
 }

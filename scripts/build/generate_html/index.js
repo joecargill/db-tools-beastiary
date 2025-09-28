@@ -4,6 +4,7 @@ import Handlebars from "handlebars";
 import { getCreatureMetadata } from "../metadata.js";
 
 export default function buildIndexPage() {
+  process.stdout.write("Generating Index HTML");
   const publicDir = path.resolve("public");
   const templateSource = fs.readFileSync(path.resolve("templates/index.html"), "utf-8");
 
@@ -19,10 +20,11 @@ export default function buildIndexPage() {
     const letter = creature.name[0].toUpperCase();
     if (!grouped[letter]) grouped[letter] = [];
     grouped[letter].push(creature);
+    process.stdout.write(".");
   });
 
   const html = template({ grouped });
 
   fs.writeFileSync(path.join(publicDir, "index.html"), html);
-  console.log("✅ Main index.html generated (grouped by letter)!");
+  console.log("✅");
 }

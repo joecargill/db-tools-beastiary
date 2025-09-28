@@ -28,9 +28,17 @@ ul {
 
 .attack-table th,
 .attack-table td {
-  padding: 8px 12px;
+  padding: 8px 10px;
   border: none;
   text-align: left;
+  vertical-align: top;
+  /* padding: .5rem 0.5rem; */
+}
+@media (min-width: 1024px) {
+  .attack-table th,
+  .attack-table td {
+    padding: 8px 12px;
+  }
 }
 
 /* horizontal dividers only */
