@@ -2,10 +2,14 @@
   "type": "MONSTER",
   "name": "Ogre",
   "description": "A large, brutish humanoid with immense strength but limited intelligence.",
+  "ferocity": 14,
   "size": "HUGE",
   "move": 6,
   "hp": 30,
-  "ferocity": 14,
+  "tags": [
+    "giant",
+    "humanoid"
+  ],
   "attacks": [
     {
       "name": "Club",
@@ -17,6 +21,5 @@
       "description": "Ogre bites its target, dealing 1d6 damage.",
       "result": "4-6"
     }
-  ],
-  "tags": ["giant", "humanoid"]
+  ]
 }

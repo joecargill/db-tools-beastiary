@@ -16,6 +16,7 @@ const sources = JSON.parse(fs.readFileSync(sourcesPath, "utf-8"));
 const validSpells = new Set(Object.keys(spellReferences));
 
 export default function buildCreaturePages() {
+  process.stdout.write("Generating Creature HTML");
   const rootDir = path.resolve(__dirname, "../../../creatures");
   const publicDir = path.resolve(__dirname, "../../../public");
   const templatesDir = path.resolve(__dirname, "../../../templates");
@@ -60,9 +61,11 @@ export default function buildCreaturePages() {
       const finalHtml = creatureLayout({ content: innerHtml, name: data.name, type });
 
       fs.writeFileSync(path.join(creatureDir, "index.html"), finalHtml);
-      console.log(`✅ Generated ${type} HTML: ${name}`);
+      process.stdout.write(".");
     });
   });
+
+  console.log("✅");
 }
 
 /**

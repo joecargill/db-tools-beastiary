@@ -2,10 +2,13 @@
   "type": "MONSTER",
   "name": "Wolf",
   "description": "A pack-hunting predator, quick and cunning.",
+  "ferocity": 6,
   "size": "NORMAL",
   "move": 8,
   "hp": 12,
-  "ferocity": 6,
+  "tags": [
+    "beast"
+  ],
   "attacks": [
     {
       "name": "Bite",
@@ -17,6 +20,5 @@
       "description": "Wolf slashes with claws, dealing 1d4 damage.",
       "result": "4-6"
     }
-  ],
-  "tags": ["beast"]
+  ]
 }

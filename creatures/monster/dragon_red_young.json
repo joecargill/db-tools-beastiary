@@ -2,10 +2,14 @@
   "type": "MONSTER",
   "name": "Dragon, Red, Young",
   "description": "A small, but fiery and aggressive dragon with a breath weapon.",
+  "ferocity": 18,
   "size": "HUGE",
   "move": 6,
   "hp": 50,
-  "ferocity": 18,
+  "tags": [
+    "dragon",
+    "fire"
+  ],
   "attacks": [
     {
       "name": "Claw",
@@ -22,6 +26,5 @@
       "description": "Dragon exhales fire in a cone, dealing 2d6 fire damage.",
       "result": "5-6"
     }
-  ],
-  "tags": ["dragon", "fire"]
+  ]
 }

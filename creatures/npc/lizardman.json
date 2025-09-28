@@ -6,11 +6,22 @@
   "move": 6,
   "hp": 10,
   "wp": 8,
+  "tags": [
+    "humanoid",
+    "reptile"
+  ],
   "skills": [
-    { "name": "Awareness", "level": 6 }
+    {
+      "name": "Awareness",
+      "level": 6
+    }
   ],
   "weapons": [
-    { "name": "Spear", "level": 6, "damage": "1d6", "durability": 10 }
-  ],
-  "tags": ["humanoid", "reptile"]
+    {
+      "name": "Spear",
+      "level": 6,
+      "damage": "1d6",
+      "durability": 10
+    }
+  ]
 }

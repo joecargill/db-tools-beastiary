@@ -1,26 +1,39 @@
 {
   "type": "MONSTER",
   "name": "Automaton",
+  "description": "An automaton is a mechanical construct built from metal and gears, powered by alchemical cores or arcane energy. These tireless guardians are often found patrolling ancient ruins, wizard towers, or treasure vaults. They obey their creator’s commands without hesitation, attacking intruders with mechanical precision. Unlike living creatures, automatons feel no pain or fear, and continue to function until completely destroyed.",
+  "morale": 12,
   "ferocity": 2,
-  "morale": 9,
-  "size": "LARGE",
-  "move": 20,
-  "hp": 20,
+  "size": "NORMAL",
+  "move": 8,
+  "hp": 10,
+  "armor": 6,
+  "tags": [
+    "construct",
+    "guardian",
+    "mechanical"
+  ],
+  "skills": [
+    {
+      "name": "Awareness",
+      "level": 6
+    }
+  ],
   "attacks": [
     {
-      "result": "1-2",
-      "name": "Lashing Tentacles",
-      "description": "2d6 bludgeoning damage."
+      "name": "Iron Fist",
+      "result": "1-3",
+      "description": "The automaton slams its heavy iron fist into its target, dealing 1d8 damage."
     },
     {
-      "result": "3-4",
-      "name": "Venemous Mandibles",
-      "description": "Bite inflicting 2d4 + 12 potency paralysis poison."
+      "name": "Grinding Strike",
+      "result": "4-5",
+      "description": "The automaton brings down a crushing blow with its geared limbs, dealing 2d6 damage."
     },
     {
-      "result": "5-6",
-      "name": "Ram and Slam",
-      "description": "1d8 bludgeoning damage, target knocked back 4m, and knocked prone."
+      "name": "Steam Burst",
+      "result": "6",
+      "description": "The automaton vents scalding steam in a 3-meter cone. All creatures in the area take 1d6 fire damage (Agility roll to halve)."
     }
   ]
 }

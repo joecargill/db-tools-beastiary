@@ -6,12 +6,28 @@
   "move": 10,
   "hp": 12,
   "wp": 10,
+  "tags": [
+    "humanoid",
+    "dwarf"
+  ],
   "skills": [
-    { "name": "Awareness", "level": 5 }
+    {
+      "name": "Awareness",
+      "level": 5
+    }
   ],
   "weapons": [
-    { "name": "Battle Axe", "level": 8, "damage": "1d8", "durability": 10 },
-    { "name": "Warhammer", "level": 6, "damage": "1d6", "durability": 10 }
-  ],
-  "tags": ["humanoid", "dwarf"]
+    {
+      "name": "Battle Axe",
+      "level": 8,
+      "damage": "1d8",
+      "durability": 10
+    },
+    {
+      "name": "Warhammer",
+      "level": 6,
+      "damage": "1d6",
+      "durability": 10
+    }
+  ]
 }

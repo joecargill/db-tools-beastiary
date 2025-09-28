@@ -1,20 +1,39 @@
 {
   "type": "NPC",
   "name": "Guard, Prison",
-  "size": "NORMAL",
   "morale": 6,
+  "size": "NORMAL",
   "move": 6,
   "hp": 15,
-  "armors": [
-    { "name": "Studded Leather", "rating": 3 }
+  "tags": [
+    "humanoid",
+    "guard"
   ],
   "skills": [
-    { "name": "Spot Hidden", "level": 10 },
-    { "name": "Awareness", "level": 12 }
+    {
+      "name": "Spot Hidden",
+      "level": 10
+    },
+    {
+      "name": "Awareness",
+      "level": 12
+    }
   ],
-  "abilities": ["Patrol Duty"],
+  "abilities": [
+    "Patrol Duty"
+  ],
   "weapons": [
-    { "name": "Spear", "level": 10, "damage": "1d10", "durability": 10 }
+    {
+      "name": "Spear",
+      "level": 10,
+      "damage": "1d10",
+      "durability": 10
+    }
   ],
-  "tags": ["humanoid", "guard"]
+  "armors": [
+    {
+      "name": "Studded Leather",
+      "rating": 3
+    }
+  ]
 }

@@ -1,7 +1,9 @@
 import fs from "fs";
 import path from "path";
 import Ajv from "ajv";
+import { creatureKeyOrder } from "../format/rules.js";
 
+// Load schema
 const schema = JSON.parse(fs.readFileSync(path.resolve("schemas/creature.schema.json"), "utf-8"));
 const ajv = new Ajv({ allErrors: true });
 const validate = ajv.compile(schema);
@@ -12,7 +14,8 @@ const spellReferences = JSON.parse(fs.readFileSync(spellRefsPath, "utf-8"));
 const validSpells = new Set(Object.keys(spellReferences));
 
 export default function validateCreatures() {
-  let failed = false; // Track any failures
+  let failed = false;
+  let formatFailed = false;
 
   ["monster", "npc"].forEach((type) => {
     const typeDir = path.join("creatures", type);
@@ -24,10 +27,10 @@ export default function validateCreatures() {
       const filePath = path.join(typeDir, file);
       const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
 
-      // JSON Schema validation
-      const valid = validate(data);
-      if (!valid) {
-        console.error(`❌ ${file} failed schema validation`, validate.errors);
+      // Schema validation
+      const validSchema = validate(data);
+      if (!validSchema) {
+        console.error(`❌ ${file} failed schema validation:`, validate.errors);
         failed = true;
       }
 
@@ -41,13 +44,32 @@ export default function validateCreatures() {
         });
       }
 
-      if (valid) console.log(`✅ ${file} passed schema validation`);
+      // Format validation
+      const canonical = {};
+      creatureKeyOrder.forEach((key) => {
+        if (key in data) canonical[key] = data[key];
+      });
+
+      const actualJson = JSON.stringify(data, Object.keys(data));
+      const expectedJson = JSON.stringify(canonical, Object.keys(canonical));
+      if (actualJson !== expectedJson) {
+        formatFailed = true;
+        failed = true;
+      }
+
+      if (validSchema && !formatFailed) {
+        console.log(`✅ ${file} passed validation`);
+      }
     });
   });
 
+  if (formatFailed) {
+    console.error("❌ Some JSON files are not correctly formatted. Please run `npm run format`.");
+  }
+
   if (failed) {
     console.error("❌ One or more creatures failed validation.");
-    process.exit(1); // Fail the process
+    process.exit(1);
   } else {
     console.log("✅ All creatures are valid");
   }
