@@ -94,8 +94,32 @@
       {{/if}}
     </table>
 
+    {{#if resistance}}
+    <div class="mt-1">
+      <p>
+        <span class="me-1"><b>Resistance:</b></span> {{resistance}}
+      </p>
+    </div>
+    {{/if}}
+
+    {{#if immunity}}
+    <div>
+      <p>
+        <span class="me-1"><b>Immunity:</b></span> {{immunity}}
+      </p>
+    </div>
+    {{/if}}
+
+    {{#if weakness}}
+    <div>
+      <p>
+        <span class="me-1"><b>Weakness:</b></span> {{weakness}}
+      </p>
+    </div>
+    {{/if}}
+
     {{#if effects}}
-    <div class="mt-3 db-font-normal">
+    <div>
       {{#each effects}}
       <p>
         <span class="me-1"><b>{{name}}:</b></span> {{description}}
@@ -103,6 +127,7 @@
       {{/each}}
     </div>
     {{/if}}
+  </div>
   </div>
 
 </div>

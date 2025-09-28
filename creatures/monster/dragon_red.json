@@ -8,9 +8,9 @@
   "move": 12,
   "hp": 84,
   "armor": 6,
-  "resistance": "Fire",
-  "immunity": "Poison",
-  "weakness": "Ice",
+  "resistance": "All piercing damage is halved (rounded up).",
+  "immunity": "Immune to fear and PERSUASION.",
+  "weakness": "Red dragons have a weakness to cold temperatures. All cold damage ignores armor.",
   "tags": [
     "dragon",
     "fire"
@@ -41,6 +41,10 @@
     {
       "name": "Wings",
       "description": "The mighty wings of the dragon allow it to move freely through the air."
+    },
+    {
+      "name": "Persuadable",
+      "description": "Unlike other monsters, ghosts can usually be PERSUADED, albeit with a bane on the roll"
     }
   ],
   "attacks": [
