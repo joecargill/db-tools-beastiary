@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-function copyFolder(srcDir, destDir) {
+export default function copyFolder(srcDir, destDir) {
   
   if (!fs.existsSync(srcDir)) return;
 
@@ -16,12 +16,4 @@ function copyFolder(srcDir, destDir) {
     process.stdout.write(".");
   }
   
-}
-
-export default function copyAssets() {
-  process.stdout.write("Copying Assets");
-  const assetsDir = path.resolve("assets");
-  const publicDir = path.resolve("public");
-  copyFolder(assetsDir, publicDir);
-  console.log("✅");
 }
