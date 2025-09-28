@@ -34,6 +34,12 @@ ul {
   vertical-align: top;
   /* padding: .5rem 0.5rem; */
 }
+.attack-table th:first-child,
+.attack-table td:first-child {
+  white-space: nowrap;     /* prevent wrapping */
+  width: 3ch;              /* or whatever fits your D6 results */
+  min-width: 45px;         /* optional fallback */
+}
 @media (min-width: 1024px) {
   .attack-table th,
   .attack-table td {
