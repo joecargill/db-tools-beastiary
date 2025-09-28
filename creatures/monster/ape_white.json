@@ -1,0 +1,47 @@
+{
+  "type": "MONSTER",
+  "name": "Ape, White",
+  "description": "Albino, herbivorous, gorilla-like apes that live in caves and emerge at night to forage. ",
+  "morale": 7,
+  "ferocity": 1,
+  "size": "NORMAL",
+  "move": 14,
+  "hp": 18,
+  "tags": [
+    "ape",
+    "beast"
+  ],
+  "skills": [
+    {
+      "name": "Awareness",
+      "level": 10
+    },
+    {
+      "name": "Evade",
+      "level": 8
+    }
+  ],
+  "effects": [
+    {
+      "name": "Territorial",
+      "description": "Will defend their lair with threats and, if this is ignored, violence."
+    }
+  ],
+  "attacks": [
+    {
+      "name": "Pummel",
+      "result": "1-2",
+      "description": "The Ape strikes out twice with it's fists, dealing 2d4 bludgeoning damage."
+    },
+    {
+      "name": "Grapple",
+      "result": "3-4",
+      "description": "Attempts to grapple the closest target. Make an opposed BRAWLING check. Cannot be dodged or parried."
+    },
+    {
+      "name": "Rock Throw",
+      "result": "5-6",
+      "description": "Hurls a heavy rock with great strength at the closest target, dealing 1d8 bludgeoning damage and knocking prone. If the Ape is already grappling a creature, it throws them instead."
+    }
+  ]
+}
